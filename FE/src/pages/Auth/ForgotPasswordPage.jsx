@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, HelpCircle, Mail, RotateCcw } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import BrandLogo from '@/components/common/BrandLogo';
 
 const ForgotPasswordPage = () => {
   return (
@@ -11,9 +12,7 @@ const ForgotPasswordPage = () => {
       className="flex min-h-svh flex-col bg-surface text-slate-950"
     >
       <header className="flex items-center justify-between px-5 py-5 sm:px-8">
-        <Link to="/login" className="text-2xl font-extrabold leading-none text-primary-deep sm:text-[1.7rem]">
-          AthletiPro
-        </Link>
+        <BrandLogo to="/login" size="md" />
         <button
           type="button"
           aria-label="Trợ giúp"
@@ -79,7 +78,7 @@ const ForgotPasswordPage = () => {
         <p className="mt-7 max-w-[min(100%,420px)] text-center text-xs font-medium text-secondary">
           Nếu bạn gặp bất kỳ vấn đề gì, vui lòng liên hệ{' '}
           <a href="#" className="font-extrabold text-primary-deep">
-            Hỗ trợ AthletiPro
+            Hỗ trợ SportsHub
           </a>
           .
         </p>
@@ -88,10 +87,8 @@ const ForgotPasswordPage = () => {
       <footer className="border-t border-slate-200 bg-white px-5 py-5 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 text-xs font-medium text-secondary md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-5">
-            <Link to="/login" className="text-2xl font-extrabold leading-none text-primary-deep">
-              AthletiPro
-            </Link>
-            <span>© 2024 AthletiPro. Precision Performance.</span>
+            <BrandLogo to="/login" size="md" />
+            <span>© 2024 SportsHub. Đặt Sân Thần Tốc, Kết Nối Đam Mê.</span>
           </div>
           <nav className="flex flex-wrap gap-4 sm:gap-5">
             <a href="#">Privacy Policy</a>

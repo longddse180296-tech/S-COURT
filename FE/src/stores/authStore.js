@@ -29,7 +29,7 @@ export const useAuthStore = create(
       logout: () => set(initialAuthState),
     }),
     {
-      name: 'athletipro-auth',
+      name: 'sportshub-auth',
       partialize: (state) => ({
         user: state.user,
         accessToken: state.accessToken,

@@ -1,10 +1,10 @@
-# AthletiPro UI Setup
+# SportsHub UI Setup
 
-File này là nguồn chuẩn giao diện cho AthletiPro. Trước khi code UI, AI/Cursor phải đọc file này và tuân thủ các quy tắc bên dưới.
+File này là nguồn chuẩn giao diện cho SportsHub. Trước khi code UI, AI/Cursor phải đọc file này và tuân thủ các quy tắc bên dưới.
 
 ## 1. Nhận Diện Chung
 
-- Tên sản phẩm: `AthletiPro`
+- Tên sản phẩm: `SportsHub`
 - Phong cách: thể thao cao cấp, sạch, hiện đại, nhiều khoảng thở, mạnh mẽ nhưng không rối.
 - Cảm giác giao diện: premium, energetic, performance-focused.
 - Ngôn ngữ hiển thị: tiếng Việt.
@@ -54,7 +54,7 @@ Quy tắc:
 - Label: `font-extrabold`, nhỏ, rõ.
 - Body/helper: `font-medium`, màu `secondary`.
 - Button: `font-extrabold`.
-- Không dùng font quá lớn trong form. Form AthletiPro nên gọn, không chiếm quá nhiều màn hình.
+- Không dùng font quá lớn trong form. Form SportsHub nên gọn, không chiếm quá nhiều màn hình.
 
 Kích thước tham khảo:
 
@@ -184,8 +184,8 @@ Layout phải đạt:
 Copy prompt này khi yêu cầu AI code UI:
 
 ```text
-Hãy đọc file FE/ATHLETIPRO_UI_SETUP.md trước khi code.
-Code giao diện React + Tailwind theo đúng style AthletiPro:
+Hãy đọc file FE/SPORTSHUB_UI_SETUP.md trước khi code.
+Code giao diện React + Tailwind theo đúng style SportsHub:
 - Emerald Green #10B981 làm màu chính.
 - Dùng Plus Jakarta Sans.
 - UI sạch, premium, thể thao, responsive.

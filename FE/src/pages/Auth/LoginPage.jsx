@@ -28,7 +28,7 @@ const LoginPage = () => {
       user: {
         id: 'mock-user-001',
         fullName: 'Nguyễn Văn A',
-        email: 'email@athletipro.vn',
+        email: 'email@sportshub.vn',
         role: 'User',
       },
       accessToken: 'mock-user-access-token',
@@ -43,7 +43,7 @@ const LoginPage = () => {
         <section className="relative hidden min-h-svh overflow-hidden bg-emerald-950 xl:block">
           <img
             src="/assets/login-athlete.png"
-            alt="Vận động viên AthletiPro đang bứt tốc"
+            alt="Vận động viên SportsHub đang bứt tốc"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/80 via-emerald-800/62 to-emerald-700/86" />
@@ -51,10 +51,10 @@ const LoginPage = () => {
 
           <div className="relative z-10 px-[7%] pt-[7%] text-white">
             <h1 className="text-[clamp(2.75rem,4vw,4.85rem)] font-extrabold leading-none tracking-normal">
-              AthletiPro
+              SportsHub
             </h1>
             <p className="mt-4 max-w-xl text-[clamp(1.05rem,1.35vw,1.55rem)] font-extrabold leading-tight">
-              Nâng tầm bản lĩnh, bứt phá giới hạn.
+              Đặt Sân Thần Tốc, Kết Nối Đam Mê
             </p>
           </div>
         </section>
@@ -68,10 +68,10 @@ const LoginPage = () => {
           >
             <div className="mb-6 xl:hidden">
               <p className="text-[clamp(1.75rem,7.5vw,2.45rem)] font-extrabold leading-none text-primary-deep">
-                AthletiPro
+                SportsHub
               </p>
               <p className="mt-2 text-sm font-bold text-secondary sm:text-[15px]">
-                Nâng tầm bản lĩnh, bứt phá giới hạn.
+                Đặt Sân Thần Tốc, Kết Nối Đam Mê
               </p>
             </div>
 
@@ -92,7 +92,7 @@ const LoginPage = () => {
                 <input
                   id="email"
                   type="email"
-                  defaultValue="email@athletipro.vn"
+                  defaultValue="email@sportshub.vn"
                   className="h-11 w-full rounded-[1.32rem] border border-slate-300 bg-surface px-[18px] text-[15px] font-medium text-slate-950 outline-none transition focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10 sm:h-12 sm:px-[22px] sm:text-[17px]"
                 />
               </div>
@@ -113,7 +113,7 @@ const LoginPage = () => {
                   <input
                     id="password"
                     type={showPassword ? 'text' : 'password'}
-                    defaultValue="athletipro"
+                    defaultValue="sportshub"
                     className="h-11 w-full rounded-[1.32rem] border border-slate-300 bg-surface px-[18px] pr-14 text-[15px] font-medium text-slate-950 outline-none transition focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10 sm:h-12 sm:px-[22px] sm:pr-16 sm:text-[17px]"
                   />
                   <button
