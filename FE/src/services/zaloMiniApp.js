@@ -37,7 +37,7 @@ export const initializeZaloMiniApp = async () => {
     headerColor: '#F8FAFC',
     headerTextColor: 'black',
     actionBar: {
-      title: 'AthletiPro',
+      title: 'SportsHub',
       leftButton: 'none',
       textAlign: 'left',
     },
@@ -49,11 +49,11 @@ export const initializeZaloMiniApp = async () => {
   });
 
   await sdk.setNavigationBarTitle?.({
-    title: 'AthletiPro',
+    title: 'SportsHub',
   });
 
   sdk.trackingManager?.logEvent?.('APP_INITIALIZING', {
-    app: 'AthletiPro',
+    app: 'SportsHub',
   });
 
   const [appInfo, systemInfo, entrySource] = await Promise.allSettled([
@@ -64,7 +64,7 @@ export const initializeZaloMiniApp = async () => {
 
   await sdk.closeLoading?.();
   sdk.trackingManager?.logEvent?.('APP_READY', {
-    app: 'AthletiPro',
+    app: 'SportsHub',
   });
 
   return {

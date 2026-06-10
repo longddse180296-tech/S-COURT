@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import BrandLogo from '@/components/common/BrandLogo';
 
 const navItems = ['Khám phá', 'Đặt sân', 'Cộng đồng', 'S-Shop'];
 
@@ -75,9 +76,7 @@ const PageWrapper = ({ children }) => (
 const Header = () => (
   <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/92 shadow-[0_8px_24px_-22px_rgba(15,23,42,0.7)] backdrop-blur">
     <div className="mx-auto flex h-[58px] w-full max-w-full items-center justify-between px-5 sm:px-8 lg:h-[66px] lg:max-w-[1280px] lg:px-10">
-      <Link to="/" className="text-[13px] font-extrabold text-primary-deep sm:text-sm">
-        AthletiPro
-      </Link>
+      <BrandLogo to="/" size="sm" />
 
       <nav className="hidden items-center gap-8 text-[13px] font-bold text-slate-500 md:flex">
         {navItems.map((item, index) => (
@@ -122,10 +121,10 @@ const Hero = () => (
       >
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-emerald-100/70 px-4 py-2 text-[11px] font-extrabold uppercase text-primary-deep">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          Hiệu suất đỉnh cao
+          Đặt sân thần tốc
         </span>
         <h1 className="mt-6 max-w-[330px] break-words text-[clamp(1.85rem,7.7vw,2.2rem)] font-extrabold leading-[1.06] text-slate-950 sm:max-w-[460px] sm:text-[clamp(2.1rem,5vw,3rem)] lg:max-w-[430px] lg:text-[clamp(1.7rem,3vw,2.65rem)] xl:text-[2.85rem]">
-          Nâng Tầm Hiệu Suất Cùng AthletiPro
+          Đặt Sân Thần Tốc, Kết Nối Đam Mê
         </h1>
         <p className="mt-6 max-w-[330px] text-[14px] font-medium leading-7 text-secondary sm:max-w-[410px] sm:text-[15px]">
           Nền tảng công nghệ thể thao hàng đầu giúp bạn tìm kiếm sân tập, kết nối cộng đồng và theo dõi tiến trình tập luyện với AI cá nhân hoá.
@@ -158,7 +157,7 @@ const Hero = () => (
       >
         <img
           src="/assets/home-hero-tennis.png"
-          alt="Vận động viên tennis AthletiPro"
+          alt="Vận động viên tennis SportsHub"
           className="absolute inset-0 h-full w-full object-cover object-[76%_center] lg:object-[80%_center]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/52 to-slate-950/20 lg:from-surface lg:via-surface/30 lg:to-slate-950/15" />
@@ -194,7 +193,7 @@ const PromoBanner = () => (
           </span>
           <h2 className="mt-3 text-lg font-extrabold leading-tight sm:text-xl">Giảm đến 50% Phí Đặt Sân</h2>
           <p className="mt-2 max-w-[520px] text-[13px] font-medium leading-6 text-slate-300">
-            Áp dụng cho tất cả cụm sân trong hệ thống AthletiPro
+            Áp dụng cho tất cả cụm sân trong hệ thống SportsHub
           </p>
         </div>
 
@@ -374,7 +373,7 @@ const Footer = () => (
   <footer id="services" className="border-t border-slate-200 bg-white">
     <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-5 py-10 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-10">
       <div>
-        <p className="text-lg font-extrabold text-primary-deep">AthletiPro</p>
+        <BrandLogo size="md" />
         <p className="mt-5 max-w-[350px] text-[13px] font-medium leading-6 text-secondary">
           Hệ sinh thái thể thao số 1 Việt Nam. Đồng hành cùng bạn trên mọi nỗ lực nâng tầm sức khỏe và phong cách sống.
         </p>
@@ -405,7 +404,7 @@ const Footer = () => (
     </div>
     <div className="border-t border-slate-200">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-4 px-5 py-5 text-[12px] font-medium text-secondary sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
-        <p>© 2024 AthletiPro. Precision Performance.</p>
+        <p>© 2024 SportsHub. Đặt Sân Thần Tốc, Kết Nối Đam Mê.</p>
         <div className="flex flex-wrap items-center gap-5">
           <a href="#services" className="transition hover:text-primary-deep">Privacy Policy</a>
           <a href="#services" className="transition hover:text-primary-deep">Terms of Service</a>

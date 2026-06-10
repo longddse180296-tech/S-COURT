@@ -17,18 +17,18 @@ const RegisterPage = () => {
       <section className="relative hidden min-h-svh overflow-hidden bg-emerald-950 md:block">
         <img
           src="/assets/login-athlete.png"
-          alt="Vận động viên AthletiPro"
+          alt="Vận động viên SportsHub"
           className="absolute inset-0 h-full w-full object-cover object-[45%_center]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/80 via-emerald-700/76 to-primary-deep/94" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,44,34,0.18),transparent_58%)]" />
 
         <div className="relative z-10 flex min-h-svh flex-col justify-between px-8 py-8 text-white lg:px-10">
-          <p className="text-[1.35rem] font-extrabold leading-none lg:text-2xl">AthletiPro</p>
+          <p className="text-[1.35rem] font-extrabold leading-none lg:text-2xl">SportsHub</p>
 
           <div className="mb-[4vh] max-w-[440px]">
             <h1 className="text-[clamp(2rem,3.9vw,2.85rem)] font-extrabold leading-[1.12] tracking-normal">
-              Nâng Tầm Hiệu Suất Cùng AthletiPro.
+              Đặt Sân Thần Tốc, Kết Nối Đam Mê
             </h1>
             <p className="mt-4 max-w-[410px] text-xs font-bold leading-relaxed text-white/95 lg:text-sm">
               Tham gia cộng đồng vận động viên chuyên nghiệp và bắt đầu hành trình chinh phục những đỉnh cao mới ngay hôm nay.
@@ -42,8 +42,8 @@ const RegisterPage = () => {
       <section className="flex min-h-svh items-center justify-center px-4 py-6 sm:px-6 md:items-start md:px-7 md:pb-4 md:pt-[78px] lg:px-8">
         <div className="w-full max-w-[340px] md:max-w-[330px] lg:max-w-[350px] xl:max-w-[360px]">
           <div className="mb-6 md:hidden">
-            <p className="text-3xl font-extrabold text-primary-deep">AthletiPro</p>
-            <p className="mt-2 text-sm font-bold text-secondary">Nâng Tầm Hiệu Suất Cùng AthletiPro.</p>
+            <p className="text-3xl font-extrabold text-primary-deep">SportsHub</p>
+            <p className="mt-2 text-sm font-bold text-secondary">Đặt Sân Thần Tốc, Kết Nối Đam Mê</p>
           </div>
 
           <div className="mb-5">
@@ -55,7 +55,7 @@ const RegisterPage = () => {
 
           <form className="space-y-[15px]">
             <Field label="Họ và tên" icon={<User size={15} />} placeholder="Nguyễn Văn A" />
-            <Field label="Email" icon={<Mail size={15} />} placeholder="example@athletipro.com" type="email" />
+            <Field label="Email" icon={<Mail size={15} />} placeholder="example@sportshub.com" type="email" />
             <PasswordField
               label="Mật khẩu"
               show={showPassword}
@@ -140,7 +140,7 @@ const PasswordField = ({ label, show, onToggle }) => (
       </span>
       <input
         type={show ? 'text' : 'password'}
-        defaultValue="athletipro"
+        defaultValue="sportshub"
         className="h-10 w-full rounded-[0.7rem] border border-slate-400/80 bg-surface px-10 pr-12 text-xs font-medium text-slate-900 outline-none transition focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10 sm:text-sm"
       />
       <button
