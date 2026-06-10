@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuthStore } from '@/stores/authStore';
 
 const PageWrapper = ({ children }) => (
   <motion.main
@@ -16,6 +17,25 @@ const PageWrapper = ({ children }) => (
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const setAuth = useAuthStore((state) => state.setAuth);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setAuth({
+      user: {
+        id: 'mock-user-001',
+        fullName: 'Nguyễn Văn A',
+        email: 'email@athletipro.vn',
+        role: 'User',
+      },
+      accessToken: 'mock-user-access-token',
+    });
+
+    navigate(location.state?.from?.pathname || '/user/home');
+  };
 
   return (
     <PageWrapper>
@@ -64,7 +84,7 @@ const LoginPage = () => {
               </p>
             </div>
 
-            <form className="space-y-[18px] sm:space-y-[22px]">
+            <form onSubmit={handleSubmit} className="space-y-[18px] sm:space-y-[22px]">
               <div>
                 <label htmlFor="email" className="mb-2 block text-sm font-extrabold text-slate-800 sm:text-[15px]">
                   Email
