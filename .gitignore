@@ -1,6 +1,12 @@
 # Logs
 logs
 *.log
+.runtime/
+
+# Visual Studio and .NET build output
+.vs/
+**/bin/
+**/obj/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
