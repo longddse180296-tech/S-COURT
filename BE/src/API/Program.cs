@@ -1,8 +1,10 @@
 using Microsoft.OpenApi.Models;
+using SCourt.Modules;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddSCourtModules();
+builder.Services.AddControllers().AddSCourtModuleControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -37,12 +39,15 @@ builder.Services.AddSwaggerGen(options =>
         },
     });
 });
-builder.Services.AddSingleton<SCourt.API.Services.DevIdentityService>();
 builder.Services.AddCors(options =>
 {
+    var allowedOrigins = builder.Configuration
+        .GetSection("Cors:AllowedOrigins")
+        .Get<string[]>() ?? ["http://localhost:5173", "http://localhost:3000"];
+
     options.AddDefaultPolicy(policy =>
         policy
-            .WithOrigins("http://localhost:5173")
+            .WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
