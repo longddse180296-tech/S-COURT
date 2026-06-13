@@ -1,4 +1,4 @@
-import AuthExperience from '@/components/auth/AuthExperience';
+import AuthExperience from "@/components/auth/AuthExperience";
 
 const RegisterPage = () => <AuthExperience mode="register" />;
 

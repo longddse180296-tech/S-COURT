@@ -1,14 +1,16 @@
-import httpClient from './httpClient';
+import httpClient from "./httpClient";
 
-const GOOGLE_SCRIPT_ID = 'google-identity-services';
+const GOOGLE_SCRIPT_ID = "google-identity-services";
 
 export const requestZaloOtp = async (phoneNumber) => {
-  const { data } = await httpClient.post('/auth/zalo/request-otp', { phoneNumber });
+  const { data } = await httpClient.post("/auth/zalo/request-otp", {
+    phoneNumber,
+  });
   return data;
 };
 
 export const verifyZaloOtp = async ({ phoneNumber, otp, fullName, role }) => {
-  const { data } = await httpClient.post('/auth/zalo/verify-otp', {
+  const { data } = await httpClient.post("/auth/zalo/verify-otp", {
     phoneNumber,
     otp,
     fullName,
@@ -26,14 +28,16 @@ const loadGoogleIdentity = () =>
 
     const existingScript = document.getElementById(GOOGLE_SCRIPT_ID);
     if (existingScript) {
-      existingScript.addEventListener('load', () => resolve(window.google), { once: true });
-      existingScript.addEventListener('error', reject, { once: true });
+      existingScript.addEventListener("load", () => resolve(window.google), {
+        once: true,
+      });
+      existingScript.addEventListener("error", reject, { once: true });
       return;
     }
 
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.id = GOOGLE_SCRIPT_ID;
-    script.src = 'https://accounts.google.com/gsi/client';
+    script.src = "https://accounts.google.com/gsi/client";
     script.async = true;
     script.defer = true;
     script.onload = () => resolve(window.google);
@@ -62,13 +66,13 @@ export const renderGoogleLoginButton = async (element, onCredential) => {
   });
   element.replaceChildren();
   google.accounts.id.renderButton(element, {
-    type: 'standard',
-    theme: 'outline',
-    size: 'large',
-    text: 'continue_with',
-    shape: 'pill',
+    type: "standard",
+    theme: "outline",
+    size: "large",
+    text: "continue_with",
+    shape: "pill",
     width: Math.min(element.clientWidth || 420, 420),
-    logo_alignment: 'left',
+    logo_alignment: "left",
   });
 };
 
@@ -77,9 +81,9 @@ const getGoogleCredential = async () => {
 
   if (!clientId) {
     return {
-      credential: 'dev-google-credential',
-      email: 'demo@sportshub.vn',
-      fullName: 'Nguyễn Minh Anh',
+      credential: "dev-google-credential",
+      email: "demo@sportshub.vn",
+      fullName: "Nguyễn Minh Anh",
     };
   }
 
@@ -87,10 +91,14 @@ const getGoogleCredential = async () => {
   return new Promise((resolve, reject) => {
     const tokenClient = google.accounts.oauth2.initTokenClient({
       client_id: clientId,
-      scope: 'openid email profile',
+      scope: "openid email profile",
       callback: (response) => {
         if (response.error || !response.access_token) {
-          reject(new Error(response.error_description || 'Google không trả về access token.'));
+          reject(
+            new Error(
+              response.error_description || "Google không trả về access token.",
+            ),
+          );
           return;
         }
 
@@ -98,13 +106,19 @@ const getGoogleCredential = async () => {
       },
       error_callback: (error) => {
         const messages = {
-          popup_failed_to_open: 'Trình duyệt đã chặn cửa sổ Google. Hãy cho phép popup cho localhost:5173.',
-          popup_closed: 'Cửa sổ đăng nhập Google đã được đóng.',
+          popup_failed_to_open:
+            "Trình duyệt đã chặn cửa sổ Google. Hãy cho phép popup cho localhost:5173.",
+          popup_closed: "Cửa sổ đăng nhập Google đã được đóng.",
         };
-        reject(new Error(messages[error.type] || `Google OAuth thất bại: ${error.type || 'unknown_error'}`));
+        reject(
+          new Error(
+            messages[error.type] ||
+              `Google OAuth thất bại: ${error.type || "unknown_error"}`,
+          ),
+        );
       },
     });
-    tokenClient.requestAccessToken({ prompt: 'select_account' });
+    tokenClient.requestAccessToken({ prompt: "select_account" });
   });
 };
 
@@ -126,7 +140,7 @@ export const loginWithGoogleCredential = async ({
   role,
   fullName,
 }) => {
-  const { data } = await httpClient.post('/auth/google', {
+  const { data } = await httpClient.post("/auth/google", {
     credential,
     email,
     fullName: fullName || googleFullName,
@@ -136,11 +150,11 @@ export const loginWithGoogleCredential = async ({
 };
 
 export const getProfile = async () => {
-  const { data } = await httpClient.get('/profile');
+  const { data } = await httpClient.get("/profile");
   return data;
 };
 
 export const updateProfile = async (profile) => {
-  const { data } = await httpClient.put('/profile', profile);
+  const { data } = await httpClient.put("/profile", profile);
   return data;
 };

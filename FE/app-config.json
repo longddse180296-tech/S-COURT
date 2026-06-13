@@ -1,0 +1,19 @@
+{
+  "app": {
+    "title": "SportsHub",
+    "headerColor": "#10B981",
+    "textColor": "white",
+    "statusBar": "transparent",
+    "leftButton": "none"
+  },
+  "pages": [
+    "pages/index"
+  ],
+  "listCSS": [
+    "./assets/index.css"
+  ],
+  "listSyncJS": [
+    "./assets/index.js"
+  ],
+  "listAsyncJS": []
+}

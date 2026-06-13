@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 const initialAuthState = {
   user: null,
@@ -29,15 +29,15 @@ export const useAuthStore = create(
       logout: () => set(initialAuthState),
     }),
     {
-      name: 'sportshub-auth',
+      name: "sportshub-auth",
       partialize: (state) => ({
         user: state.user,
         accessToken: state.accessToken,
         refreshToken: state.refreshToken,
         isAuthenticated: state.isAuthenticated,
       }),
-    }
-  )
+    },
+  ),
 );
 
 export const getAccessToken = () => useAuthStore.getState().accessToken;

@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { useAppStore } from '@/stores/appStore';
-import { initializeZaloMiniApp } from '@/services/zaloMiniApp';
+import { useEffect } from "react";
+import { useAppStore } from "@/stores/appStore";
+import { initializeZaloMiniApp } from "@/services/zaloMiniApp";
 
 export const useBootstrapApp = () => {
   const setBootstrapState = useAppStore((state) => state.setBootstrapState);

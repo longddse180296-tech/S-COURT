@@ -15,50 +15,50 @@ import {
   Target,
   UserRound,
   Zap,
-} from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import BrandLogo from '@/components/common/BrandLogo';
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import BrandLogo from "@/components/common/BrandLogo";
 
-const navItems = ['Khám phá', 'Đặt sân', 'Cộng đồng', 'S-Shop'];
+const navItems = ["Khám phá", "Đặt sân", "Cộng đồng", "S-Shop"];
 
 const venues = [
   {
-    title: 'Cụm Sân Quốc Tế Star Pro',
-    meta: 'Quận 7, TP.HCM • 1.2km',
-    image: '/assets/home-court-indoor.png',
-    rating: '4.9',
-    badge: 'AIMATCH · 98%',
-    className: 'lg:col-span-6 lg:row-span-2',
+    title: "Cụm Sân Quốc Tế Star Pro",
+    meta: "Quận 7, TP.HCM • 1.2km",
+    image: "/assets/home-court-indoor.png",
+    rating: "4.9",
+    badge: "AIMATCH · 98%",
+    className: "lg:col-span-6 lg:row-span-2",
   },
   {
-    title: 'Sân Pickleball Elite',
-    meta: 'Cách bạn 3.5km',
-    image: '/assets/home-court-indoor.png',
-    badge: 'Phổ biến',
-    className: 'lg:col-span-3',
+    title: "Sân Pickleball Elite",
+    meta: "Cách bạn 3.5km",
+    image: "/assets/home-court-indoor.png",
+    badge: "Phổ biến",
+    className: "lg:col-span-3",
   },
   {
-    title: 'Trung Tâm Thể Thao Đà Nẵng',
-    meta: 'Hoạt động 24/7',
-    image: '/assets/home-hero-tennis.png',
-    badge: 'Mới',
-    className: 'lg:col-span-3',
+    title: "Trung Tâm Thể Thao Đà Nẵng",
+    meta: "Hoạt động 24/7",
+    image: "/assets/home-hero-tennis.png",
+    badge: "Mới",
+    className: "lg:col-span-3",
   },
 ];
 
 const footerGroups = [
   {
-    title: 'Dịch vụ',
-    links: ['Đặt sân cầu lông', 'Đặt sân tennis', 'Pickleball', 'Sân bóng đá'],
+    title: "Dịch vụ",
+    links: ["Đặt sân cầu lông", "Đặt sân tennis", "Pickleball", "Sân bóng đá"],
   },
   {
-    title: 'Cộng đồng',
-    links: ['Tìm bạn chơi', 'Giải đấu phong trào', 'Blog thể thao'],
+    title: "Cộng đồng",
+    links: ["Tìm bạn chơi", "Giải đấu phong trào", "Blog thể thao"],
   },
   {
-    title: 'Hỗ trợ',
-    links: ['Trung tâm trợ giúp', 'Điều khoản dịch vụ', 'Chính sách bảo mật'],
+    title: "Hỗ trợ",
+    links: ["Trung tâm trợ giúp", "Điều khoản dịch vụ", "Chính sách bảo mật"],
   },
 ];
 
@@ -82,8 +82,8 @@ const Header = () => (
         {navItems.map((item, index) => (
           <a
             key={item}
-            href={index === 0 ? '#explore' : '#services'}
-            className={`transition hover:text-primary-deep ${index === 0 ? 'text-primary-deep' : ''}`}
+            href={index === 0 ? "#explore" : "#services"}
+            className={`transition hover:text-primary-deep ${index === 0 ? "text-primary-deep" : ""}`}
           >
             {item}
           </a>
@@ -127,7 +127,8 @@ const Hero = () => (
           Đặt Sân Thần Tốc, Kết Nối Đam Mê
         </h1>
         <p className="mt-6 max-w-[330px] text-[14px] font-medium leading-7 text-secondary sm:max-w-[410px] sm:text-[15px]">
-          Nền tảng công nghệ thể thao hàng đầu giúp bạn tìm kiếm sân tập, kết nối cộng đồng và theo dõi tiến trình tập luyện với AI cá nhân hoá.
+          Nền tảng công nghệ thể thao hàng đầu giúp bạn tìm kiếm sân tập, kết
+          nối cộng đồng và theo dõi tiến trình tập luyện với AI cá nhân hoá.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <motion.a
@@ -173,8 +174,12 @@ const Hero = () => (
               <Zap className="h-5 w-5" strokeWidth={2.3} />
             </span>
             <div>
-              <p className="text-[13px] font-extrabold text-slate-950">Hoạt động mới nhất</p>
-              <p className="mt-0.5 text-xs font-medium text-secondary">25 người đang đặt sân cầu lông</p>
+              <p className="text-[13px] font-extrabold text-slate-950">
+                Hoạt động mới nhất
+              </p>
+              <p className="mt-0.5 text-xs font-medium text-secondary">
+                25 người đang đặt sân cầu lông
+              </p>
             </div>
           </div>
         </motion.div>
@@ -191,7 +196,9 @@ const PromoBanner = () => (
           <span className="inline-flex rounded-full bg-primary px-3 py-1 text-[10px] font-extrabold uppercase text-white">
             Ưu đãi chớp nhoáng
           </span>
-          <h2 className="mt-3 text-lg font-extrabold leading-tight sm:text-xl">Giảm đến 50% Phí Đặt Sân</h2>
+          <h2 className="mt-3 text-lg font-extrabold leading-tight sm:text-xl">
+            Giảm đến 50% Phí Đặt Sân
+          </h2>
           <p className="mt-2 max-w-[520px] text-[13px] font-medium leading-6 text-slate-300">
             Áp dụng cho tất cả cụm sân trong hệ thống SportsHub
           </p>
@@ -199,14 +206,19 @@ const PromoBanner = () => (
 
         <div className="flex flex-wrap items-center gap-4 sm:gap-5">
           {[
-            ['02', 'Giờ'],
-            ['45', 'Phút'],
-            ['05', 'Giây'],
+            ["02", "Giờ"],
+            ["45", "Phút"],
+            ["05", "Giây"],
           ].map(([value, label]) => (
-            <div key={label} className="grid h-[64px] w-[64px] place-items-center rounded-xl border border-white/20 bg-white/10">
+            <div
+              key={label}
+              className="grid h-[64px] w-[64px] place-items-center rounded-xl border border-white/20 bg-white/10"
+            >
               <div className="text-center">
                 <p className="text-xl font-extrabold">{value}</p>
-                <p className="mt-1 text-[10px] font-medium uppercase text-slate-300">{label}</p>
+                <p className="mt-1 text-[10px] font-medium uppercase text-slate-300">
+                  {label}
+                </p>
               </div>
             </div>
           ))}
@@ -239,7 +251,10 @@ const VenueCard = ({ venue }) => (
     <div className="absolute left-4 top-4 flex flex-wrap items-center gap-2">
       {venue.rating && (
         <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[10px] font-extrabold text-slate-800">
-          <Star className="h-3 w-3 fill-primary text-primary" strokeWidth={2.2} />
+          <Star
+            className="h-3 w-3 fill-primary text-primary"
+            strokeWidth={2.2}
+          />
           {venue.rating}
         </span>
       )}
@@ -248,7 +263,9 @@ const VenueCard = ({ venue }) => (
       </span>
     </div>
     <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-      <h3 className="max-w-[340px] text-base font-extrabold leading-tight sm:text-lg">{venue.title}</h3>
+      <h3 className="max-w-[340px] text-base font-extrabold leading-tight sm:text-lg">
+        {venue.title}
+      </h3>
       <p className="mt-1 flex items-center gap-1 text-xs font-bold text-white/85">
         <MapPin className="h-3.5 w-3.5" strokeWidth={2.2} />
         {venue.meta}
@@ -258,10 +275,15 @@ const VenueCard = ({ venue }) => (
 );
 
 const Explore = () => (
-  <section id="explore" className="mx-auto w-full max-w-[1280px] px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
+  <section
+    id="explore"
+    className="mx-auto w-full max-w-[1280px] px-5 py-14 sm:px-8 lg:px-10 lg:py-20"
+  >
     <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <p className="text-[13px] font-bold text-slate-600">Khám Phá Sân Gần Bạn</p>
+        <p className="text-[13px] font-bold text-slate-600">
+          Khám Phá Sân Gần Bạn
+        </p>
         <h2 className="mt-2 max-w-[620px] text-[15px] font-medium leading-6 text-secondary">
           AI gợi ý những địa điểm phù hợp nhất với kỹ năng và thói quen của bạn.
         </h2>
@@ -286,7 +308,10 @@ const Explore = () => (
         className="relative min-h-[220px] overflow-hidden rounded-[18px] bg-primary p-8 text-white shadow-premium lg:col-span-6"
       >
         <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-white/12" />
-        <Dumbbell className="absolute bottom-10 right-10 h-16 w-16 rotate-45 text-white/20" strokeWidth={2.5} />
+        <Dumbbell
+          className="absolute bottom-10 right-10 h-16 w-16 rotate-45 text-white/20"
+          strokeWidth={2.5}
+        />
         <div className="relative z-10 mt-10 max-w-[310px]">
           <h3 className="text-xl font-extrabold">Khóa Học Pro</h3>
           <p className="mt-3 text-[13px] font-medium leading-6 text-white/86">
@@ -305,11 +330,16 @@ const Explore = () => (
 );
 
 const MapSection = () => (
-  <section id="map" className="mx-auto w-full max-w-[1280px] px-5 pb-16 sm:px-8 lg:px-10 lg:pb-24">
+  <section
+    id="map"
+    className="mx-auto w-full max-w-[1280px] px-5 pb-16 sm:px-8 lg:px-10 lg:pb-24"
+  >
     <div className="rounded-[22px] bg-slate-200/65 p-5 sm:p-7">
       <div className="mb-5 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
-          <h2 className="text-[14px] font-bold text-slate-700">Bản Đồ Sân Thể Thao</h2>
+          <h2 className="text-[14px] font-bold text-slate-700">
+            Bản Đồ Sân Thể Thao
+          </h2>
           <p className="mt-1 text-[13px] font-medium text-secondary">
             Tìm kiếm cụm sân thuận tiện nhất tại khu vực của bạn.
           </p>
@@ -335,12 +365,12 @@ const MapSection = () => (
         <div className="absolute inset-0 opacity-55 [background-image:linear-gradient(90deg,rgba(255,255,255,.55)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,.55)_1px,transparent_1px)] [background-size:72px_72px]" />
         <div className="absolute inset-x-[8%] top-[42%] h-6 rotate-[-18deg] rounded-full bg-white/45 blur-sm" />
         {[
-          ['left-[30%] top-[35%]', 'bg-primary-deep text-white'],
-          ['left-[44%] top-[31%]', 'bg-slate-500/70 text-white'],
-          ['left-[58%] top-[26%]', 'bg-slate-500/70 text-white'],
-          ['left-[69%] top-[42%]', 'bg-slate-500/70 text-white'],
-          ['left-[52%] top-[58%]', 'bg-slate-500/70 text-white'],
-          ['left-[36%] top-[56%]', 'bg-slate-500/70 text-white'],
+          ["left-[30%] top-[35%]", "bg-primary-deep text-white"],
+          ["left-[44%] top-[31%]", "bg-slate-500/70 text-white"],
+          ["left-[58%] top-[26%]", "bg-slate-500/70 text-white"],
+          ["left-[69%] top-[42%]", "bg-slate-500/70 text-white"],
+          ["left-[52%] top-[58%]", "bg-slate-500/70 text-white"],
+          ["left-[36%] top-[56%]", "bg-slate-500/70 text-white"],
         ].map(([position, color], index) => (
           <span
             key={index}
@@ -357,10 +387,18 @@ const MapSection = () => (
           <Navigation className="h-5 w-5" strokeWidth={2.4} />
         </button>
         <div className="absolute right-5 top-5 grid overflow-hidden rounded-xl bg-white shadow-premium">
-          <button type="button" aria-label="Phóng to" className="grid h-10 w-10 place-items-center text-xl font-bold text-slate-600 hover:bg-slate-50">
+          <button
+            type="button"
+            aria-label="Phóng to"
+            className="grid h-10 w-10 place-items-center text-xl font-bold text-slate-600 hover:bg-slate-50"
+          >
             +
           </button>
-          <button type="button" aria-label="Thu nhỏ" className="grid h-10 w-10 place-items-center border-t border-slate-200 text-xl font-bold text-slate-600 hover:bg-slate-50">
+          <button
+            type="button"
+            aria-label="Thu nhỏ"
+            className="grid h-10 w-10 place-items-center border-t border-slate-200 text-xl font-bold text-slate-600 hover:bg-slate-50"
+          >
             -
           </button>
         </div>
@@ -375,7 +413,8 @@ const Footer = () => (
       <div>
         <BrandLogo size="md" />
         <p className="mt-5 max-w-[350px] text-[13px] font-medium leading-6 text-secondary">
-          Hệ sinh thái thể thao số 1 Việt Nam. Đồng hành cùng bạn trên mọi nỗ lực nâng tầm sức khỏe và phong cách sống.
+          Hệ sinh thái thể thao số 1 Việt Nam. Đồng hành cùng bạn trên mọi nỗ
+          lực nâng tầm sức khỏe và phong cách sống.
         </p>
         <div className="mt-5 flex items-center gap-3">
           <span className="grid h-8 w-8 place-items-center rounded-full bg-emerald-50 text-primary-deep">
@@ -389,11 +428,16 @@ const Footer = () => (
 
       {footerGroups.map((group) => (
         <div key={group.title}>
-          <h3 className="text-[13px] font-extrabold text-slate-950">{group.title}</h3>
+          <h3 className="text-[13px] font-extrabold text-slate-950">
+            {group.title}
+          </h3>
           <ul className="mt-4 space-y-3">
             {group.links.map((link) => (
               <li key={link}>
-                <a href="#explore" className="text-[13px] font-medium text-secondary transition hover:text-primary-deep">
+                <a
+                  href="#explore"
+                  className="text-[13px] font-medium text-secondary transition hover:text-primary-deep"
+                >
                   {link}
                 </a>
               </li>
@@ -406,9 +450,15 @@ const Footer = () => (
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-4 px-5 py-5 text-[12px] font-medium text-secondary sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
         <p>© 2024 SportsHub. Đặt Sân Thần Tốc, Kết Nối Đam Mê.</p>
         <div className="flex flex-wrap items-center gap-5">
-          <a href="#services" className="transition hover:text-primary-deep">Privacy Policy</a>
-          <a href="#services" className="transition hover:text-primary-deep">Terms of Service</a>
-          <a href="#services" className="transition hover:text-primary-deep">Security</a>
+          <a href="#services" className="transition hover:text-primary-deep">
+            Privacy Policy
+          </a>
+          <a href="#services" className="transition hover:text-primary-deep">
+            Terms of Service
+          </a>
+          <a href="#services" className="transition hover:text-primary-deep">
+            Security
+          </a>
         </div>
       </div>
     </div>
