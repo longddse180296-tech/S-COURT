@@ -1,11 +1,11 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
-import ForgotPasswordPage from './pages/Auth/ForgotPasswordPage.jsx';
-import LoginPage from './pages/Auth/LoginPage.jsx';
-import RegisterPage from './pages/Auth/RegisterPage.jsx';
-import ProfilePage from './pages/Profile/ProfilePage.jsx';
-import HomePage from './pages/User/HomePage.jsx';
-import RequireAuth from './routes/RequireAuth.jsx';
-import { useBootstrapApp } from './hooks/useBootstrapApp';
+import { Navigate, Route, Routes } from "react-router-dom";
+import ForgotPasswordPage from "./pages/Auth/ForgotPasswordPage.jsx";
+import LoginPage from "./pages/Auth/LoginPage.jsx";
+import RegisterPage from "./pages/Auth/RegisterPage.jsx";
+import ProfilePage from "./pages/Profile/ProfilePage.jsx";
+import HomePage from "./pages/User/HomePage.jsx";
+import RequireAuth from "./routes/RequireAuth.jsx";
+import { useBootstrapApp } from "./hooks/useBootstrapApp";
 
 const App = () => {
   useBootstrapApp();

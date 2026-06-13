@@ -1,5 +1,5 @@
-import { Navigate, useLocation } from 'react-router-dom';
-import { useAuthStore } from '@/stores/authStore';
+import { Navigate, useLocation } from "react-router-dom";
+import { useAuthStore } from "@/stores/authStore";
 
 const RequireAuth = ({ children, role }) => {
   const location = useLocation();

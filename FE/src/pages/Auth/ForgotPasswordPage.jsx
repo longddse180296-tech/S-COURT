@@ -1,7 +1,13 @@
-import { ArrowLeft, ArrowRight, HelpCircle, Mail, RotateCcw } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import BrandLogo from '@/components/common/BrandLogo';
+import {
+  ArrowLeft,
+  ArrowRight,
+  HelpCircle,
+  Mail,
+  RotateCcw,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import BrandLogo from "@/components/common/BrandLogo";
 
 const ForgotPasswordPage = () => {
   return (
@@ -33,13 +39,17 @@ const ForgotPasswordPage = () => {
               Quên mật khẩu?
             </h1>
             <p className="mx-auto mt-2 max-w-[270px] text-xs font-medium leading-relaxed text-secondary">
-              Đừng lo lắng, hãy nhập email của bạn và chúng tôi sẽ gửi hướng dẫn khôi phục mật khẩu.
+              Đừng lo lắng, hãy nhập email của bạn và chúng tôi sẽ gửi hướng dẫn
+              khôi phục mật khẩu.
             </p>
           </div>
 
           <form className="mt-6 space-y-4">
             <div>
-              <label htmlFor="recovery-email" className="mb-2 block text-[11px] font-extrabold uppercase tracking-wide text-slate-700">
+              <label
+                htmlFor="recovery-email"
+                className="mb-2 block text-[11px] font-extrabold uppercase tracking-wide text-slate-700"
+              >
                 Địa chỉ email
               </label>
               <div className="relative">
@@ -76,7 +86,7 @@ const ForgotPasswordPage = () => {
         </div>
 
         <p className="mt-7 max-w-[min(100%,420px)] text-center text-xs font-medium text-secondary">
-          Nếu bạn gặp bất kỳ vấn đề gì, vui lòng liên hệ{' '}
+          Nếu bạn gặp bất kỳ vấn đề gì, vui lòng liên hệ{" "}
           <a href="#" className="font-extrabold text-primary-deep">
             Hỗ trợ SportsHub
           </a>

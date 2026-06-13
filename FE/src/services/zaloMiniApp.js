@@ -1,22 +1,22 @@
-const isBrowser = typeof window !== 'undefined';
+const isBrowser = typeof window !== "undefined";
 
 export const isZaloMiniAppRuntime = () => {
   if (!isBrowser) {
     return false;
   }
 
-  const userAgent = window.navigator.userAgent || '';
+  const userAgent = window.navigator.userAgent || "";
 
   return Boolean(
     window.ZaloJavaScriptInterface ||
-      window.zaloJSV2 ||
-      window.zmp ||
-      userAgent.includes('Zalo')
+    window.zaloJSV2 ||
+    window.zmp ||
+    userAgent.includes("Zalo"),
   );
 };
 
 const loadZaloSdk = async () => {
-  const sdk = await import('zmp-sdk');
+  const sdk = await import("zmp-sdk");
   return sdk.default || sdk;
 };
 
@@ -33,27 +33,27 @@ export const initializeZaloMiniApp = async () => {
   const sdk = await loadZaloSdk();
 
   await sdk.configAppView?.({
-    statusBarType: 'transparent',
-    headerColor: '#F8FAFC',
-    headerTextColor: 'black',
+    statusBarType: "transparent",
+    headerColor: "#F8FAFC",
+    headerTextColor: "black",
     actionBar: {
-      title: 'SportsHub',
-      leftButton: 'none',
-      textAlign: 'left',
+      title: "SportsHub",
+      leftButton: "none",
+      textAlign: "left",
     },
   });
 
   await sdk.setNavigationBarColor?.({
-    color: '#F8FAFC',
-    statusBarColor: '#F8FAFC',
+    color: "#F8FAFC",
+    statusBarColor: "#F8FAFC",
   });
 
   await sdk.setNavigationBarTitle?.({
-    title: 'SportsHub',
+    title: "SportsHub",
   });
 
-  sdk.trackingManager?.logEvent?.('APP_INITIALIZING', {
-    app: 'SportsHub',
+  sdk.trackingManager?.logEvent?.("APP_INITIALIZING", {
+    app: "SportsHub",
   });
 
   const [appInfo, systemInfo, entrySource] = await Promise.allSettled([
@@ -63,15 +63,15 @@ export const initializeZaloMiniApp = async () => {
   ]);
 
   await sdk.closeLoading?.();
-  sdk.trackingManager?.logEvent?.('APP_READY', {
-    app: 'SportsHub',
+  sdk.trackingManager?.logEvent?.("APP_READY", {
+    app: "SportsHub",
   });
 
   return {
     isZaloMiniApp: true,
-    appInfo: appInfo.status === 'fulfilled' ? appInfo.value : null,
-    systemInfo: systemInfo.status === 'fulfilled' ? systemInfo.value : null,
-    entrySource: entrySource.status === 'fulfilled' ? entrySource.value : null,
+    appInfo: appInfo.status === "fulfilled" ? appInfo.value : null,
+    systemInfo: systemInfo.status === "fulfilled" ? systemInfo.value : null,
+    entrySource: entrySource.status === "fulfilled" ? entrySource.value : null,
   };
 };
 
@@ -90,8 +90,8 @@ export const getZaloUserSession = async () => {
   ]);
 
   return {
-    profile: profile.status === 'fulfilled' ? profile.value : null,
-    accessToken: accessToken.status === 'fulfilled' ? accessToken.value : null,
+    profile: profile.status === "fulfilled" ? profile.value : null,
+    accessToken: accessToken.status === "fulfilled" ? accessToken.value : null,
   };
 };
 
