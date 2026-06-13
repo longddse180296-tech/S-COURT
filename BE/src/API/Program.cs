@@ -1,8 +1,10 @@
 using Microsoft.OpenApi.Models;
+using SCourt.Modules;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddSCourtModules();
+builder.Services.AddControllers().AddSCourtModuleControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -37,7 +39,6 @@ builder.Services.AddSwaggerGen(options =>
         },
     });
 });
-builder.Services.AddSingleton<SCourt.API.Services.DevIdentityService>();
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
