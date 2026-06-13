@@ -6,6 +6,7 @@ import ProfilePage from './pages/Profile/ProfilePage.jsx';
 import HomePage from './pages/User/HomePage.jsx';
 import RequireAuth from './routes/RequireAuth.jsx';
 import { useBootstrapApp } from './hooks/useBootstrapApp';
+import ShowcasePage from './pages/DesignSystem/ShowcasePage.jsx';
 
 const App = () => {
   useBootstrapApp();
@@ -41,6 +42,7 @@ const App = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/design-system" element={<ShowcasePage />} />
     </Routes>
   );
 };
