@@ -19,9 +19,11 @@ Script sẽ tự:
 
 - Cài frontend dependencies nếu chưa có.
 - Build backend.
-- Chạy API tại `http://localhost:5000`.
-- Mở Swagger tại `http://localhost:5000/swagger`.
-- Chạy frontend tại `http://localhost:5173`.
+FE:        http://localhost:3000
+API:       http://localhost:5000
+Swagger:   http://localhost:5000/swagger
+SQLServer: localhost,1433
+Redis:     localhost:6379.
 - Kiểm tra cả hai service đã sẵn sàng.
 
 Dừng toàn bộ hệ thống:
