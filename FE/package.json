@@ -10,14 +10,14 @@
     "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-react": "^4.3.3",
     "axios": "latest",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.468.0",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",
-    "vite": "latest",
+    "vite": "^5.4.11",
     "zmp-sdk": "^2.51.4",
     "zustand": "^5.0.14"
   },
